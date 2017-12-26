@@ -1,0 +1,35 @@
+classdef rounds% ha a k�rnek v�ge akkor �rtelmezhet�
+    properties
+        winner % ha ures akkor nem te nyersz kesobb majd feltoltjuk Player(ek)-el
+        pot
+        phaseSum=0
+        phases
+        players
+        hand
+        position
+        gameid
+    end
+    methods
+            
+        function a=getPlayerSum(obj)
+            a=length(obj.players);
+        end
+        function obj = AddPhase(rnd,phase)%phasenek phase obj. kell lennie
+            if(rnd.phaseSum>3)
+                disp("hiba max 4 fazis lehet 1 korbe");
+            end
+            if (rnd.phaseSum>0)
+                rnd.phaseSum=rnd.phaseSum+1;
+                rnd.phases{rnd.phaseSum}=phase;
+            else
+                rnd.phaseSum =1;
+                rnd.phases{1}=phase;
+            end
+            obj = rnd;
+        end
+        function a = getPhase(obj)
+            a=phases{phaseSum};
+        end
+        
+    end
+end
