@@ -1,0 +1,12 @@
+config.players=9;
+config.mymoney = [];
+load vars/preflop;
+config.preflop = preflop;
+config.currency = 'playMoney';
+config.gamestyle = 'cashtable';
+config.path = 'screen.jpg';
+config.bigBlind = [];
+config.mycards = [];
+config.table = [];
+config.WindowStartingHeight = [];
+config.WindowStartingWidth = [];
